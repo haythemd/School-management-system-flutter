@@ -32,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage>
     Firebase.initializeApp();
     super.initState();
     animationController =
-        AnimationController(duration: Duration(seconds: 3), vsync: this);
+        AnimationController(duration: Duration(milliseconds: 1500), vsync: this);
     animation = Tween(begin: -1.0, end: 0.0).animate(CurvedAnimation(
         parent: animationController, curve: Curves.fastOutSlowIn));
 
@@ -56,9 +56,10 @@ class _MyHomePageState extends State<MyHomePage>
     super.dispose();
   }
 
-  UserModel _userfromfirebase(FirebaseUser user) {
-    return user != null ? UserModel(uid: user.uid) : null;
+  UserModel _userfromfirebase(User user) {
     print(user);
+    return user != null ? UserModel(uid: user.uid) : null;
+
   }
 
   GlobalKey<FormState> _formkey = GlobalKey<FormState>();
@@ -137,7 +138,7 @@ class _MyHomePageState extends State<MyHomePage>
                       children: <Widget>[
                         Form(
                             key: _formkey,
-                            autovalidate: _autoValidate,
+
                             child: Column(
                               children: [
                                 TextFormField(
@@ -264,41 +265,38 @@ class _MyHomePageState extends State<MyHomePage>
                     child: Column(
                       children: <Widget>[
                         Bouncing(
-                          onPress: () {
+                          onPress: () async {
+
                             if (_formkey.currentState.validate()) {
                               _formkey.currentState.save();
-                              /*try {
-                                final FirebaseUser user =
-                                    (await _auth.signInWithEmailAndPassword(
-                                  email: _email,
-                                  password: _pass,
-                                ))
-                                        .user;
-                                dynamic userinfo = _auth.currentUser;
-                                return _userfromfirebase(userinfo);
-                              } catch (e) {
-                                if (e.code == 'user-not-found') {
-                                  print("user not found");
-                                } else if (e.code == 'wrong-password') {
-                                  print("wrong password");
-                                } else {
-                                  print("check internet connection!");
-                                }
+                              try {
+        UserCredential userCredential = await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: "barry.allen@example.com",
+        password: "SuperSecretPassword!"
+        );
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (BuildContext context) => Home(),
+            ));
+        } on FirebaseAuthException catch (e) {
+        if (e.code == 'user-not-found') {
+        print('No user found for that email.');
+        } else if (e.code == 'wrong-password') {
+        print('Wrong password provided for that user.');
+        }
+
+
+                               print('authenticated');
+        print(_auth.currentUser.email);
+
                               }
                             } else {
                               setState(() {
                                 _autoValidate = true;
                               });
-                            }*/
-
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (BuildContext context) => Home(),
-                                  ));
                             }
-                            ;
-                          },
+                            },
                           child: MaterialButton(
                             onPressed: () {},
                             elevation: 0.0,
@@ -349,7 +347,7 @@ class _MyHomePageState extends State<MyHomePage>
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        "Coded By Deepak",
+                        "Coded By Tek-up Students",
                         style: TextStyle(
                             color: Colors.black, fontWeight: FontWeight.bold),
                       ),

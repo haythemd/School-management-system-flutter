@@ -14,15 +14,15 @@ class _TodayAttendanceState extends State<TodayAttendance> {
         children: [
          AttendanceCard(attendance: true,
          endtime: "10 AM",
-         staff: "Deepak",
+         staff: "Moez",
          starttime: "9 AM",
          subject: "English",
          ),
          AttendanceCard(attendance: false,
          endtime: "10 AM",
-         staff: "Deepak",
+         staff: "Wassim",
          starttime: "9 AM",
-         subject: "English",
+         subject: "Symfony",
          ),
           
         ],

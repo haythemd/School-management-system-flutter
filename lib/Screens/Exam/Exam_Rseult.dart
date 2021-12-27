@@ -142,7 +142,7 @@ class _ExamResultState extends State<ExamResult>
                         transform: Matrix4.translationValues(
                             muchDelayedAnimation.value * width, 0, 0),
                         child: SubjectCard(
-                          subjectname: "Language(Tamil)",
+                          subjectname: "English",
                           chapter: "1-5",
                           date: "12/12/2020",
                           grade: "A+",
@@ -156,7 +156,7 @@ class _ExamResultState extends State<ExamResult>
                         child: Padding(
                           padding: const EdgeInsets.only(top:8.0),
                           child: SubjectCard(
-                            subjectname: "English",
+                            subjectname: "Symfony",
                             chapter: "1-5",
                             date: "13/12/2020",
                             grade: "A+",
@@ -186,7 +186,7 @@ class _ExamResultState extends State<ExamResult>
                         child: Padding(
                           padding: const EdgeInsets.only(top:8.0),
                           child: SubjectCard(
-                            subjectname: "science",
+                            subjectname: "Spring",
                             chapter: "1-5",
                             date: "14/12/2020",
                             grade: "A+",
@@ -201,7 +201,7 @@ class _ExamResultState extends State<ExamResult>
                         child: Padding(
                           padding: const EdgeInsets.only(top:8.0),
                           child: SubjectCard(
-                            subjectname: "Social Science",
+                            subjectname: "Project",
                             chapter: "1-5",
                             date: "15/12/2020",
                             grade: "A+",
@@ -386,3 +386,4 @@ class _ExamResultState extends State<ExamResult>
         });
   }
 }
+

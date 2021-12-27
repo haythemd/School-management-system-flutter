@@ -101,7 +101,7 @@ class _UserDetailCardState extends State<UserDetailCard>
                                   Padding(
                                     padding: const EdgeInsets.only(top: 10.0),
                                     child: Text(
-                                      "Deepakkumar",
+                                      "Oussema Chaibi",
                                       style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 21,
@@ -116,7 +116,7 @@ class _UserDetailCardState extends State<UserDetailCard>
                                           MainAxisAlignment.spaceBetween,
                                       children: [
                                         Text(
-                                          "Standard: 12",
+                                          "GLSI",
                                           style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                             color: Colors.white,

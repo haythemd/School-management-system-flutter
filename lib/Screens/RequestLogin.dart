@@ -169,17 +169,7 @@ class _RequestLoginState extends State<RequestLogin>
                                   onSaved: (val) {
                                     _class = val;
                                   },
-                                  validator: (value) {
-                                    RegExp nameRegExp = RegExp('[0-9]');
-                                    RegExp numberRegExp = RegExp(r'\d');
-                                    if (value.isEmpty) {
-                                      return 'You Must enter your class!';
-                                    } else if (nameRegExp.hasMatch(value)) {
-                                      return null;
-                                    } else {
-                                      return 'Enter Vaild class';
-                                    }
-                                  },
+
                                   decoration: InputDecoration(
                                       labelText: 'Class',
                                       contentPadding: EdgeInsets.all(5),
@@ -223,7 +213,7 @@ class _RequestLoginState extends State<RequestLogin>
                                 TextFormField(
                                   validator: (value) {
                                     String pattern =
-                                        r'(^(?:[+0]9)?[0-9]{10,12}$)';
+                                        r'(^(?:[+0]9)?[0-9]{6,12}$)';
                                     RegExp regExp = new RegExp(pattern);
                                     if (value.length == 0) {
                                       return 'Please enter mobile number';

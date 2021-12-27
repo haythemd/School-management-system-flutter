@@ -107,7 +107,7 @@ class _ForgetPasswordState extends State<ForgetPassword>
                       children: <Widget>[
                         Form(
                             key: _formkey,
-                            autovalidate: _autovalidate,
+
                             child: Column(
                               children: [
                                 TextFormField(

@@ -16,7 +16,7 @@ class _SpleashScreenState extends State<SpleashScreen> {
   void initState() {
     Firebase.initializeApp();
 
-    Timer(Duration(seconds: 8), start);
+    Timer(Duration(seconds: 4), start);
   }
 
   Widget build(BuildContext context) {

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "647267892035",
+    "project_id": "tekup-50c39",
+    "storage_bucket": "tekup-50c39.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647267892035:android:59027b298bf9b8480a4df6",
+        "android_client_info": {
+          "package_name": "tn.tekup.uniApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647267892035-tmrjd0t65us6uqber38fn91h9q18dsee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZDYulTBM0cbRgKuxWOAo_rJyvs9Ev-S8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "647267892035-tmrjd0t65us6uqber38fn91h9q18dsee.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
